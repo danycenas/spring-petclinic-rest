@@ -7,7 +7,7 @@ pipeline {
         ARTIFACT_NAME = 'spring-petclinic-rest.jar'
         AWS_S3_BUCKET = 'elasticbeanstalk-us-west-2-231784247281'
         AWS_EB_APP_NAME = 'spring-petclinic-rest'
-        AWS_EB_ENVIRONMENT = 'spring-petclinic-rest-env'
+        AWS_EB_ENVIRONMENT = 'Springpetclinicrest-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
     }
     stages {
