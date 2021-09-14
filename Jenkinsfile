@@ -16,7 +16,7 @@ pipeline {
                 sh 'mvn clean package -DskipTests -B -ntp'
             }
         }
-        stage('E2E Testing') {
+        stage('Deploy EC2') {
             agent{
                 docker {
                     image 'amazon/aws-cli'
@@ -24,7 +24,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'aws-cli --version'
+                sh 'aws --version'
 
                 archiveArtifacts 'target/*.jar'
                 // sh 'aws configure set region us-west-2'
